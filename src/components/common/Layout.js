@@ -57,7 +57,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     />
                   </Link>
                 </div>
-                <div className="site-mast-right">
+                {/* <div className="site-mast-right">
                   <a
                     className="site-nav-item"
                     href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
@@ -70,7 +70,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                       alt="RSS Feed"
                     />
                   </a>
-                </div>
+                </div> */}
               </div>
               {isHome ? (
                 <div className="site-banner">

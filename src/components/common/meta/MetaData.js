@@ -35,7 +35,7 @@ const MetaData = ({ data, settings, title, description, image, location }) => {
             />
         );
     } else {
-        title = title || config.siteTitleMeta || settings.title;
+        title = config.siteTitleMeta || settings.title;
         description =
             description || config.siteDescriptionMeta || settings.description;
         image = image || settings.cover_image || null;
