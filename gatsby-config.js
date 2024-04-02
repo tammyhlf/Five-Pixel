@@ -48,10 +48,11 @@ if (
  *
  */
 module.exports = {
+    pathPrefix: "/five-pixel",
     siteMetadata: {
         siteUrl: process.env.SITEURL || config.siteUrl,
     },
-    trailingSlash: 'always',
+    trailingSlash: "always",
     plugins: [
         /**
          *  Content Plugins
