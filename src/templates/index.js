@@ -54,6 +54,26 @@ const Index = ({ data, location, pageContext }) => {
               excerpt: "产品图片在电商平台的真实效果展示",
           },
       },
+      {
+          node: {
+              slug: "the-editor",
+              feature_image:
+                  "https://static.ghost.org/v3.0.0/images/app-integrations.png",
+              title: "Apps & integrations",
+              title: "写真",
+              excerpt: "展现你最真实的美",
+          },
+      },
+      {
+          node: {
+              slug: "the-editor",
+              feature_image:
+                  "https://static.ghost.org/v3.0.0/images/app-integrations.png",
+              title: "Apps & integrations",
+              title: "婚礼",
+              excerpt: "精通各种场景婚礼拍摄",
+          },
+      },
   ];
 
   return (
