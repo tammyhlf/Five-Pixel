@@ -18,7 +18,7 @@ const Index = ({ data, location, pageContext }) => {
   const posts = [
       {
           node: {
-              slug: "welcome",
+              slug: "scene",
               feature_image:
                   "https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png",
               title: "Creating a custom theme",

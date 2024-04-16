@@ -146,6 +146,11 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+  
+  createPage({
+    path: "/scene", // 新页面的路径
+    component: path.resolve("/page/scene"), // 新页面的组件路径
+  });
 
   // Create pagination
   paginate({
