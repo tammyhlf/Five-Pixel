@@ -2,13 +2,14 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { Link, StaticQuery, graphql } from "gatsby";
+import catalog from '../../images/common/catalog.png';
 import { GatsbyImage } from "gatsby-plugin-image";
-
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
 
 // Styles
 import "../../styles/app.css";
+import "../../styles/catalog.css";
 
 /**
  * Main layout component
@@ -27,105 +28,99 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
     : null;
 
+  const onHandleCatelog = () => {
+    console.log('🚀')
+  }
+
   return (
-    <>
-      <Helmet>
-        <html lang={site.lang} />
-        <style type="text/css">{`${site.codeinjection_styles}`}</style>
-        <body className={bodyClass} />
-      </Helmet>
+      <>
+          <Helmet>
+              <html lang={site.lang} />
+              <style type="text/css">{`${site.codeinjection_styles}`}</style>
+              <body className={bodyClass} />
+          </Helmet>
 
-      <div className="viewport">
-        <div className="viewport-top">
-          {/* The main header section on top of the screen */}
-          <header
-            className="site-head"
-            style={{
-              ...(site.cover_image && {
-                backgroundImage: `url(${site.cover_image})`,
-              }),
-            }}
-          >
-            <div className="container">
-              <div className="site-mast">
-                <div className="site-mast-left">
-                  <Link to="/">
-                    <img
-                      className="site-logo"
-                      src={site.logo}
-                      alt={site.title}
-                    />
-                  </Link>
-                </div>
-                {/* <div className="site-mast-right">
-                  <a
-                    className="site-nav-item"
-                    href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+          <div className="viewport">
+              <div className="catalog">
+    
+              </div>
+              <div className="viewport-top">
+                  {/* The main header section on top of the screen */}
+                  <header
+                      className="site-head"
+                      style={{
+                          ...(site.cover_image && {
+                              backgroundImage: `url(${site.cover_image})`,
+                          }),
+                      }}
                   >
-                    <img
-                      className="site-nav-icon"
-                      src="/images/icons/rss.svg"
-                      alt="RSS Feed"
-                    />
-                  </a>
-                </div> */}
+                      <div className="container">
+                          <div className="site-mast">
+                              <div
+                                  className="site-mast-left"
+                                  onClick={onHandleCatelog}
+                              >
+                                  <img
+                                      className="site-logo"
+                                      src={catalog}
+                                      alt="目录"
+                                  />
+                              </div>
+                          </div>
+                          {isHome ? (
+                              <div className="site-banner">
+                                  <h3 className="site-banner-title">
+                                      Five Pixel工作室
+                                  </h3>
+                                  <p className="site-banner-desc">
+                                      专注摄影十二年
+                                  </p>
+                              </div>
+                          ) : null}
+                          {/* <nav className="site-nav">
+              <div className="site-nav-left">
+                <Navigation
+                  data={site.navigation}
+                  navClass="site-nav-item"
+                />
               </div>
-              {isHome ? (
-                <div className="site-banner">
-                  <h3 className="site-banner-title">
-                    Five Pixel工作室
-                  </h3>
-                  <p className="site-banner-desc">
-                    专注摄影十二年
-                  </p>
-                </div>
-              ) : null}
-              {/* <nav className="site-nav">
-                <div className="site-nav-left">
-                  <Navigation
-                    data={site.navigation}
-                    navClass="site-nav-item"
-                  />
-                </div>
-                <div className="site-nav-right">
-                  <Link
-                    className="site-nav-button"
-                    to="/about"
-                  >
-                    About
-                  </Link>
-                </div>
-              </nav> */}
-            </div>
-          </header>
+              <div className="site-nav-right">
+                <Link
+                  className="site-nav-button"
+                  to="/about"
+                >
+                  About
+                </Link>
+              </div>
+            </nav> */}
+                      </div>
+                  </header>
 
-          <main className="site-main">
-            {/* All the main content gets inserted here, index.js, post.js */}
-            {children}
-          </main>
-        </div>
+                  <main className="site-main">
+                      {/* All the main content gets inserted here, index.js, post.js */}
+                      {children}
+                  </main>
+              </div>
 
-        <div className="viewport-bottom">
-          {/* The footer at the very bottom of the screen */}
-          <footer className="site-foot">
-            <div className="site-foot-nav container">
-              <div className="site-foot-nav-left">
-                © 2024 &mdash; Designed by Tammy
+              <div className="viewport-bottom">
+                  {/* The footer at the very bottom of the screen */}
+                  <footer className="site-foot">
+                      <div className="site-foot-nav container">
+                          <div className="site-foot-nav-left">
+                              © 2024 &mdash; Designed by Tammy
+                          </div>
+                          <div className="site-foot-nav-right">
+                              联系我们
+                              {/* <Navigation
+                                data={site.navigation}
+                                navClass="site-foot-nav-item"
+                            /> */}
+                          </div>
+                      </div>
+                  </footer>
               </div>
-              <div className="site-foot-nav-right">
-                联系我们
-                {/* <Navigation
-                                  data={site.navigation}
-                                  navClass="site-foot-nav-item"
-                              /> */}
-              </div>
-            </div>
-          </footer>
-        </div>
-      </div>
-    </>
+          </div>
+      </>
   );
 };
 

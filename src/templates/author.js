@@ -73,7 +73,7 @@ const Author = ({ data, location, pageContext }) => {
             </div>
           </header>
           <section className="post-feed">
-            {posts.map(({ node }) => (
+            {posts.map((node) => (
               // The tag below includes the markup for each post - components/common/PostCard.js
               <PostCard key={node.id} post={node} />
             ))}
