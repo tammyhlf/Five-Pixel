@@ -6,7 +6,7 @@ import catalog from '../../images/common/catalog.png';
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
-
+import home from '../../images/home/home.jpg'
 // Styles
 import "../../styles/app.css";
 import "../../styles/catalog.css";
@@ -50,7 +50,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                       className="site-head"
                       style={{
                           ...(site.cover_image && {
-                              backgroundImage: `url(${site.cover_image})`,
+                              backgroundImage: `url(${home})`,
                           }),
                       }}
                   >
@@ -70,10 +70,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                           {isHome ? (
                               <div className="site-banner">
                                   <h3 className="site-banner-title">
-                                      Five Pixel工作室
+                                      北甜 Studio
                                   </h3>
                                   <p className="site-banner-desc">
-                                      专注摄影十二年
+                                      专注影像十二年📸️
+                                  </p>
+                                  <p className="site-banner-sub-desc">
+                                      人像写真｜跟拍｜产品图拍摄
                                   </p>
                               </div>
                           ) : null}

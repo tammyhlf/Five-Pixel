@@ -4,6 +4,9 @@ import { graphql } from "gatsby";
 
 import { Layout, PostCard, Pagination } from "../components/common";
 import { MetaData } from "../components/common/meta";
+import product from '../images/home/product.jpg'
+import portrait from '../images/home/portrait.jpg'
+import follow from '../images/home/follow.jpg'
 
 /**
  * Main index page (home page)
@@ -17,54 +20,29 @@ const Index = ({ data, location, pageContext }) => {
   // const posts = data.allGhostPost.edges;
   const posts = [
       {
+        slug: "the-editor",
+        feature_image: portrait,
+        title: "Apps & integrations",
+        title: "人像写真",
+        excerpt: "在我这里 你就是主角",
+      },
+      {
+        slug: "video",
+        feature_image: follow,
+        title: "Apps & integrations",
+        title: "跟拍",
+        excerpt: "领证跟拍｜婚礼跟拍｜毕业跟拍｜其他跟拍",
+      },
+      {
         slug: "scene",
-        feature_image:
-            "https://static.ghost.org/v3.0.0/images/creating-a-custom-theme.png",
+        feature_image: product,
         title: "Creating a custom theme",
-        title: "场景图",
+        title: "产品图",
         children: [
             { title: "白底图", path: "/scene", point: "whitBg" },
             { title: "暖色调", path: "/scene", point: "warmTone" },
         ],
-        excerpt: "包含当前市面上常见的饰品拍摄风格",
-      },
-      {
-        slug: "video",
-        feature_image:
-            "https://static.ghost.org/v3.0.0/images/app-integrations.png",
-        title: "Apps & integrations",
-        title: "视频",
-        excerpt: "可在线预览",
-      },
-      {
-        slug: "detail",
-        feature_image:
-            "https://static.ghost.org/v3.0.0/images/organising-your-content.png",
-        title: "详情图",
-        excerpt: "图片设计",
-      },
-      {
-        slug: "admin-settings",
-        feature_image:
-            "https://static.ghost.org/v3.0.0/images/admin-settings.png",
-        title: "完整案例",
-        excerpt: "产品图片在电商平台的真实效果展示",
-      },
-      {
-        slug: "the-editor",
-        feature_image:
-            "https://static.ghost.org/v3.0.0/images/app-integrations.png",
-        title: "Apps & integrations",
-        title: "写真",
-        excerpt: "展现你最真实的美",
-      },
-      {
-        slug: "the-editor",
-        feature_image:
-            "https://static.ghost.org/v3.0.0/images/app-integrations.png",
-        title: "Apps & integrations",
-        title: "婚礼",
-        excerpt: "精通各种场景婚礼拍摄",
+        excerpt: "资深团队，服务多个知名品牌",
       },
   ];
 

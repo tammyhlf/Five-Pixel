@@ -767,12 +767,20 @@ h6 {
   color: #fff;
   font-size: 4rem;
   line-height: 1.3em;
+  font-weight: 500;
 }
 
 .site-banner-desc {
-  margin: 5px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 0;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
+  line-height: 1.3em;
+  opacity: 0.7;
+}
+.site-banner-sub-desc {
+  margin: 16px 0 0 0;
+  padding: 0;
+  font-size: 1.4rem;
   line-height: 1.3em;
   opacity: 0.7;
 }
@@ -845,10 +853,10 @@ h6 {
 
 .post-card-bottom {
   position: absolute;
-  top: 175px;
+  top: 182px;
   left: 0;
   width: 100%;
-  height: 75px;
+  height: 68px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(40px);
@@ -862,7 +870,7 @@ h6 {
 }
 
 .post-card-excerpt {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 1.55em;
 }
 
@@ -873,6 +881,7 @@ h6 {
   height: 250px;
   background: var(--color-secondary) no-repeat center center;
   background-size: cover;
+  box-shadow: 5px 5px 18px #a8a8b2;
 }
 
 .post-card-footer {
