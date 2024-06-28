@@ -73,7 +73,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                       北甜 Studio
                                   </h3>
                                   <p className="site-banner-desc">
-                                      专注影像十二年📸️
+                                      专注影像十二年
                                   </p>
                                   <p className="site-banner-sub-desc">
                                       人像写真｜跟拍｜产品图拍摄
